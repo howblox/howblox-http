@@ -42,7 +42,7 @@ services:
       - REDIS_PASSWORD=${REDIS_PASSWORD:-admin123}
       - REDIS_PORT=${REDIS_PORT:-6379}
       - DISCORD_TOKEN=${DISCORD_TOKEN}
-      - HTTP_BOT_API=http://howblox-http
+      - HTTP_BOT_API=http://bloxlink-http
       - HTTP_BOT_AUTH=${HTTP_BOT_AUTH}
       - BOT_RELEASE=${BOT_RELEASE:-LOCAL}
       - BOT_API_AUTH=${BOT_API_AUTH:-admin123}
@@ -68,7 +68,7 @@ services:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
       - HTTP_BOT_API=${HTTP_BOT_API}
       - HTTP_BOT_AUTH=${HTTP_BOT_AUTH:-admin123}
-      - PLAYING_STATUS=${PLAYING_STATUS:-Howblox}
+      - PLAYING_STATUS=${PLAYING_STATUS:-Bloxlink}
       - SHARD_COUNT=${SHARD_COUNT:-1}
       - SHARDS_PER_NODE=${SHARDS_PER_NODE:-1}
       - BOT_RELEASE=${BOT_RELEASE:-LOCAL}
@@ -82,7 +82,7 @@ services:
       - mongodb
       - redis
 
-  howblox-http:
+  bloxlink-http:
     build: .
     container_name: howblox-http
     restart: unless-stopped
